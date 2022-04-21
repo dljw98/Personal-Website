@@ -6,10 +6,78 @@
         <meta charset="UTF-8">
         <meta name="Data Science Home Page" content="Data Science Home Page">
         <style>
+            body {
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                background-color:cornsilk;
+            }
+            .navoptions {
+                list-style-type: None;
+                margin:0;
+                width:100%;
+                padding:10px 10px 10px 10px;
+                background-color:#23233F;
+            }
+            .navoptions li {
+                display:inline;
+                padding:18px 20px;
+            }
+            .navoptions li a {
+                color:white;
+                text-decoration: none;
+                font-size: medium;
+                font-weight: bold;
+            }
+            .navoptions img{
+                width:25px;
+                height:auto;
+                padding:0px 10px;
+            }
+            .navoptions li:hover {
+                background-color: black;
+            }
+            .header {
+                font-style:italic;
+                font-weight: bold;
+                color:gray;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .searchbar {
+                font-weight: bolder;
+                color: black;
 
+            }
+            .searchbar img {
+                width: 22px;
+                height:auto;
+                position: relative;
+                top:6px;
+            }
         </style>
     </head>
-
     
+    <body>
+        <div class="navbar">
+            <ul class="navoptions">
+                <img src="https://i.postimg.cc/GmVTvDnF/pic.png">
+                <li><a href="welcome.html">Home</a></li>
+                <li><a href="datascience.html">Data Science</a></li>
+                <li><a href="finance.html">Finance</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="gaming.html">Gaming</a></li>
+                <!--li><a href="">Home</a></li-->
+            </ul>
+        </div>
+        <div class="header">
+            <p>"Commit yourself to lifelong learning. The most valuable asset you'll ever have is your mind and what you put into it."
+                -Albert Einstein</p>
+        </div>
+        <div class="searchbar">
+            <p> Which field of computing would you like to learn about?
+            <input type="text" placeholder="Search...">
+            <img src="https://i.postimg.cc/fRstTsZs/search.jpg">
+            </p>
+        </div>
+
+    </body>
 
 </html>
