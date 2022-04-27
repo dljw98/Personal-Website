@@ -1,82 +1,118 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <title>The Navigation Page for Data Science Topics</title>
-        <meta charset="UTF-8">
-        <meta name="Data Science Home Page" content="Data Science Home Page">
-        <style>
-            body {
-                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                background-color:cornsilk;
-            }
-            .navoptions {
-                list-style-type: None;
-                margin:0;
-                width:100%;
-                padding:10px 10px 10px 10px;
-                background-color:#23233F;
-            }
-            .navoptions li {
-                display:inline;
-                padding:18px 20px;
-            }
-            .navoptions li a {
-                color:white;
-                text-decoration: none;
-                font-size: medium;
-                font-weight: bold;
-            }
-            .navoptions img{
-                width:25px;
-                height:auto;
-                padding:0px 10px;
-            }
-            .navoptions li:hover {
-                background-color: black;
-            }
-            .header {
-                font-style:italic;
-                font-weight: bold;
-                color:gray;
-                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            }
-            .searchbar {
-                font-weight: bolder;
-                color: black;
 
-            }
-            .searchbar img {
-                width: 22px;
-                height:auto;
-                position: relative;
-                top:6px;
-            }
-        </style>
-    </head>
-    
-    <body>
-        <div class="navbar">
-            <ul class="navoptions">
-                <img src="https://i.postimg.cc/GmVTvDnF/pic.png">
-                <li><a href="welcome.html">Home</a></li>
-                <li><a href="datascience.html">Data Science</a></li>
-                <li><a href="finance.html">Finance</a></li>
-                <li><a href="sports.html">Sports</a></li>
-                <li><a href="gaming.html">Gaming</a></li>
-                <!--li><a href="">Home</a></li-->
-            </ul>
-        </div>
-        <div class="header">
-            <p>"Commit yourself to lifelong learning. The most valuable asset you'll ever have is your mind and what you put into it."
-                -Albert Einstein</p>
-        </div>
-        <div class="searchbar">
-            <p> Which field of computing would you like to learn about?
-            <input type="text" placeholder="Search...">
-            <img src="https://i.postimg.cc/fRstTsZs/search.jpg">
-            </p>
-        </div>
+<head>
+    <title>The Navigation Page for Data Science Topics</title>
+    <meta charset="UTF-8">
+    <meta name="Data Science Home Page" content="Data Science Home Page">
+    <style>
+        html,body {
+            height:100%;
+            width:100%;
+        }            
+        body {
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-image: url('https://i.postimg.cc/mrmsMnHD/Plain-Background.jpg');
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        .navoptions {
+            list-style-type: None;
+            margin:0;
+            width:100%;
+            padding:20px 20px 20px 20px;
+            background-color:#23233F;
+        }
+        .navoptions li {
+            display:inline;
+            padding:20px 50px;
+        }
+        .navoptions li a {
+            color:white;
+            text-decoration: none;
+            font-size: medium;
+            font-weight: bold;
+        }
+        .navoptions img{
+            width:25px;
+            height:auto;
+            padding:0px 10px;
+        }
+        .navoptions li:hover {
+            background-color: black;
+        }
+        .header {
+            font-style:italic;
+            font-weight: bold;
+            color:gray;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .searchbar {
+            font-weight: bolder;
+            color: black;
+
+        }
+        .searchbar img {
+            width: 22px;
+            height:auto;
+            position: relative;
+            top:6px;
+        }
+        #categories h1 {
+            text-align: center;
+            position:relative;
+            top:6px;
+        }
+        #categories ul {
+            column-count: 3;
+            -webkit-column-count: 3;
+            -mozcolumn-count: 3;
+            list-style: none;
+        }
+        #categories ul li a{
+            text-decoration: none;
+            color:black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul class="navoptions">
+            <img src="https://i.postimg.cc/GmVTvDnF/pic.png">
+            <li><a href="welcome.html">Home</a></li>
+            <li><a href="datascience.html">Data Science</a></li>
+            <li><a href="finance.html">Finance</a></li>
+            <li><a href="sports.html">Football News</a></li>
+            <li><a href="sports.html">NBA News</a></li>
+            <li><a href="gaming.html">Gaming</a></li>
+            <!--li><a href="">Home</a></li-->
+        </ul>
+    </div>
+    <div class="header">
+        <p>"Commit yourself to lifelong learning. The most valuable asset you'll ever have is your mind and what you put into it."
+            -Albert Einstein</p>
+    </div>
+    <div class="searchbar">
+        <p> Which field of computing would you like to learn about?
+        <input type="text" placeholder="Search...">
+        <img src="https://i.postimg.cc/fRstTsZs/search.jpg">
+        </p>
+    </div>
+    <div id="categories">
+        <h1>Popular categories today</h1>
+        <ul>
+            <li><a href="bigdata.html">Big Data</a></li>
+            <li><a href="machinelearning.html">Machine Learning</a></li>
+            <li><a href="datastructures.html">Data Structures</a></li>
+            <li><a href="oop.html">Object Oriented Programming</a></li>
+            <li><a href="dashboards.html">Dashboards and Data Visualization</a></li>
+            <li><a href="databases.html">Databases</a></li>
+            <li><a href="python.html">Python Essentials</a></li>
+            <li><a href="java.html">Java Essentials</a></li>
+            <li><a href="sql.html">SQL Essentials</a></li>
+        </ul>
+    </div>
 
     </body>
 
