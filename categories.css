@@ -1,0 +1,15 @@
+#categories h1 {
+    text-align: center;
+    position:relative;
+    top:6px;
+}
+#categories ul {
+    column-count: 3;
+    -webkit-column-count: 3;
+    -mozcolumn-count: 3;
+    list-style: none;
+}
+#categories ul li a{
+    text-decoration: none;
+    color:black;
+}

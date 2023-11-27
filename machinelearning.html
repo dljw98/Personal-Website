@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Machine Learning: Information and Projects</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <link rel="stylesheet" type="text/css" href="categories.css">
+    <style>
+        body {
+            margin: 0px;
+            background-color: #B8CCFF;
+        }
+
+        .main {
+            padding: 1%;
+        }
+
+        .column {
+            float: left;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .left {
+            width: 65%;
+            background-color: black;
+            margin: 1% 2%;
+        }
+        .right {
+            width: 26%;
+            background-color: white;
+            margin: 1% 2%;
+            position: sticky;
+        }
+        .projects{
+            list-style: none;
+            text-align: left;
+        }
+        .main:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="https://i.postimg.cc/GmVTvDnF/pic.png">
+        <a href="home.html">Home</a>
+        <div class="dropdown">
+            <button onclick="datascience_dropdown()" class="dropbutton">Data Science</button>
+            <div id="datascience-dropdown-content" class="datascience-dropdown-content">
+                <a href="python.html">Python Guides</a>
+                <a href="sql.html">SQL Guides</a>
+                <a href="machinelearning.html">Machine Learning</a>
+                <a href="webdesign.html">Web Design</a>
+            </div>
+        </div>
+        <a href="sports.html">Sports</a>
+        <a href="gaming.html">Gaming</a>
+        <a href="fitness.html">Fitness</a>
+        <a href="anime.html">Anime</a>
+    </div>
+    <div class="main">
+        <div class="column left">
+            <h1>Machine Learning Tutorial</h1>
+            <h4>This machine learning tutorial helps you learn the basics and techniques of machine learning
+                from scratch. 
+                <br><br>
+                This tutorial was made working under the assumption that a basic level of Python Programming
+                is present by the viewer. For some guides to get you started on Python programming, please
+                check out the Python
+            </h4>
+        </div>
+        <div class="column right">
+            <ul class="projects">
+                <li>
+                    <h2>Anomaly Detection</h2>
+                    <h4>Anomaly detection on images of fonts using Convolutional Neural Networks</h4>
+                </li>
+                <li>
+                    <h2>Multiclass Classification</h2>
+                    <h4>Multiclass Classification on CIFAR-10 dataset using Convolutional Neural Networks</h4>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+
+<script>
+    /*Toggles between hiding and showing the dropdown when clicked*/
+    function datascience_dropdown() {
+        document.getElementById("datascience-dropdown-content").classList.toggle("show");
+    }
+    //Close the dropdown menu if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches(".dropbutton")) {
+            var dropdowns = document.getElementsByClassName("datascience-dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains("show")) {
+                    openDropdown.classList.remove("show"); // Remove show on each dropdown element
+                }
+            }
+        }
+    }
+</script>
+
+</body>
+
+</html>
