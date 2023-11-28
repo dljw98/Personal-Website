@@ -7,30 +7,220 @@
     <link rel="stylesheet" type="text/css" href="navbar.css">
     <link rel="stylesheet" type="text/css" href="categories.css">
     <style>
-        body {
+        html,body {
+            margin:0;
+            height:100%;
+            font-family: 'Josefin Sans', sans-serif;
             margin: 0px;
             background-color: #B8CCFF;
         }
-
         .main {
             padding: 1%;
         }
-
         .column {
             float: left;
             padding: 10px;
             box-sizing: border-box;
         }
         .left {
+            border-radius: 25px;
             width: 65%;
-            background-color: black;
             margin: 1% 2%;
+        }
+        .leftfirst{
+            z-index:-1;
+            background-color: #7395EB;
+            padding: 15% 15%;
+            border-radius: 25px 25px 0px 0px;
+            width:auto;
+        }
+        .leftfirst img {
+            width:200px;
+            height:200px;
+            float:left;
+            margin: 0% 4% 2% 2%;
+            bottom:10px;
+            position: relative;
+        }
+        .leftfirst button {
+            background-color: white;
+            color:black;
+            text-align: left;
+            font-size: 10px;
+            border-radius: 15px;
+            position:relative;
+            width:125px;
+            padding:5px 10px 2px;
+        }
+        .leftfirst button img{
+            height:10px;
+            width:15px;
+            position:relative;
+            float:right;
+            margin:none;
+            bottom:3px;
+        }
+        .leftfirstsecond, .leftsecondthird, .leftthirdfourth, .leftfourthfifth{
+            z-index:1;
+            margin-top: -47.5px;
+            margin-left: 125px;
+            background-color: whitesmoke;
+            width:40%;
+            text-align: center;
+            height:90px;
+            padding:5px 0px 0px 0px;
+            border-style:solid;
+            position: absolute;
+        }
+        .leftfirstsecondcolumn, .leftsecondthirdcolumn, .leftthirdfourthcolumn, .leftfourthfifthcolumn{
+            float: left;
+            width:33%;
+            box-sizing: border-box;
+            margin-top: -12px;
+        }
+        .leftsecond {
+            z-index:-2;
+            background-color: whitesmoke;
+            color:black;
+            width:auto;
+            padding: 14% 15%;
+        }
+        .leftsecond img {
+            height: 200px;
+            width: 300px;
+            float:right;
+            margin: 2% 0% 2% 3%;
+        }
+        .leftsecond button {
+            background-color: #7395EB;
+            color:black;
+            text-align: left;
+            font-size: 10px;
+            border-radius: 15px;
+            position:relative;
+            width:125px;
+            padding:5px 10px 2px;
+        }
+        .leftsecond button img{
+            height:10px;
+            width:15px;
+            position:relative;
+            float:right;
+            margin:none;
+            bottom:3px;
+        }
+        .leftthird{
+            z-index:-1;
+            background-color: #7395EB;
+            padding: 15% 15%;
+            width:auto;
+        }
+        .leftthird img {
+            height:200px;
+            width:200px;
+            margin: 0% 4% 2% 2%;
+            position:relative;
+            float:left;
+            margin:none;
+            bottom:3px;
+        }
+        .leftthird button {
+            background-color: white;
+            color:black;
+            text-align: left;
+            font-size: 10px;
+            border-radius: 15px;
+            position:relative;
+            width:125px;
+            padding:5px 10px 2px;
+        }
+        .leftthird button img{
+            height:10px;
+            width:15px;
+            position:relative;
+            float:right;
+            margin:none;
+            bottom:3px;
+        }
+        .leftfourth {
+            z-index:-2;
+            background-color: whitesmoke;
+            color:black;
+            width:auto;
+            padding: 14% 15%;
+        }
+        .leftfourth img {
+            height: 200px;
+            width: 300px;
+            float:right;
+            margin: 2% 0% 2% 3%;
+        }
+        .leftfourth button {
+            background-color: #7395EB;
+            color:black;
+            text-align: left;
+            font-size: 10px;
+            border-radius: 15px;
+            position:relative;
+            width:125px;
+            padding:5px 10px 2px;
+        }
+        .leftfourth button img{
+            height:10px;
+            width:15px;
+            position:relative;
+            float:right;
+            margin:none;
+            bottom:3px;
+        }
+        .leftfourthfifth {
+
+        }
+        .leftfifth{
+            z-index:-1;
+            background-color: #7395EB;
+            padding: 15% 15%;
+            width:auto;
+            border-radius: 0px 0px 25px 25px;
+        }
+        .leftfifth img {
+            height:200px;
+            width:200px;
+            margin: 0% 4% 2% 2%;
+            position:relative;
+            float:left;
+            margin:none;
+            bottom:3px;
+        }
+        .leftfifth button {
+            background-color: white;
+            color:black;
+            text-align: left;
+            font-size: 10px;
+            border-radius: 15px;
+            position:relative;
+            width:125px;
+            padding:5px 10px 2px;
+        }
+        .leftfifth button img{
+            height:10px;
+            width:15px;
+            position:relative;
+            float:right;
+            margin:none;
+            bottom:3px;
+        }
+        button:hover {
+            cursor:pointer;
         }
         .right {
             width: 26%;
-            background-color: white;
+            background-color: #7395EB;
+            color:white;
             margin: 1% 2%;
-            position: sticky;
+            top: 10px;
+            border-style: solid;
+            border-color: black;
         }
         .projects{
             list-style: none;
@@ -41,6 +231,29 @@
             display: table;
             clear: both;
         }
+        .anomaly, .multiclass, .sentiment, .forecasting, .webscraping {
+            text-align: center;
+        }
+        .anomaly img {
+            height:100px;
+            width:275px;
+        }
+        .multiclass, .forecasting {
+            color:black;
+        }
+        .multiclass img {
+            height:100px;
+            width:275px;
+        }
+        .forecasting img {
+            height:100px;
+            width:275px;
+        }
+        .line {
+            display: inline-block;
+            border-top: 2.5px solid black;
+            width: 100%;
+          }
     </style>
 </head>
 
@@ -51,10 +264,9 @@
         <div class="dropdown">
             <button onclick="datascience_dropdown()" class="dropbutton">Data Science</button>
             <div id="datascience-dropdown-content" class="datascience-dropdown-content">
-                <a href="python.html">Python Guides</a>
+                <a href="datastructures.html">Data Structures</a>
                 <a href="sql.html">SQL Guides</a>
                 <a href="machinelearning.html">Machine Learning</a>
-                <a href="webdesign.html">Web Design</a>
             </div>
         </div>
         <a href="sports.html">Sports</a>
@@ -64,27 +276,172 @@
     </div>
     <div class="main">
         <div class="column left">
-            <h1>Machine Learning Tutorial</h1>
-            <h4>This machine learning tutorial helps you learn the basics and techniques of machine learning
-                from scratch. 
-                <br><br>
-                This tutorial was made working under the assumption that a basic level of Python Programming
-                is present by the viewer. For some guides to get you started on Python programming, please
-                check out the Python
-            </h4>
+            <div class="leftfirst">
+                <img src="https://i.postimg.cc/rFwdwTFf/8637099.png">
+                <h1><b>Machine Learning Basics</b></h1>
+                <h5>This machine learning tutorial helps you learn the basics and techniques of 
+                    machine learning from scratch.</h5>
+                <a href="machinelearningtutorial.html">
+                    <button>
+                        <span><b>Get started now!</b></span>
+                        <img src="https://i.postimg.cc/ZRqgqj0B/go-6.png">
+                    </button>
+                </a>
+                <br>
+                <h6 style="margin-top:50px; margin-bottom:-65px; text-align:center">ML and AI use cases worldwide</h6>
+            </div>
+            <div class="leftfirstsecond">
+                <div class="leftfirstsecondcolumn">
+                    <h4>Customer <br>Insights</h4>
+                    <h4 style="margin:-13px; color:#1241BD">50%</h4>
+                </div>
+                <div class="leftfirstsecondcolumn">
+                    <h4>Detecting <br> Fraud</h4>
+                    <h4 style="margin:-13px; color:#1241BD">46%</h4>
+                </div>
+                <div class="leftfirstsecondcolumn">
+                    <h4>Brand <br>Awareness</h4>
+                    <h4 style="margin:-13px; color:#1241BD">30%</h4>
+                </div>
+            </div>
+            <div class="leftsecond">
+                <img src="https://i.postimg.cc/cL4JdG0d/dnn-28vmlum.png">
+                <h1><b>Introduction to CNNs</b></h1>
+                <h5>A quick introduction to CNNs and the world of 
+                    advanced image processing and pattern recognition.</h5>
+                <a href="cnn.html">
+                    <button>
+                        <span><b>Get started now!</b></span>
+                        <img src="https://i.postimg.cc/ZRqgqj0B/go-6.png">
+                    </button>
+                </a>
+            </div>
+            <div class="leftsecondthird">
+                <div class="leftsecondthirdcolumn">
+                    <h4>Customer <br>Insights</h4>
+                    <h4 style="margin:-13px; color:#1241BD">50%</h4>
+                </div>
+                <div class="leftsecondthirdcolumn">
+                    <h4>Detecting <br> Fraud</h4>
+                    <h4 style="margin:-13px; color:#1241BD">46%</h4>
+                </div>
+                <div class="leftsecondthirdcolumn">
+                    <h4>Brand <br>Awareness</h4>
+                    <h4 style="margin:-13px; color:#1241BD">30%</h4>
+                </div>
+            </div>
+            <div class="leftthird">
+                <img src="https://i.postimg.cc/zG4KvF7t/10306116.png">
+                <h1>NLPs: The Future</h1>
+                <h5> A brief exploration of NLPs, delving into the realm of linguistic analysis 
+                    and machine comprehension to unravel the intricacies of language understanding 
+                    and generation.</h5>
+                <a href="nlp.html">
+                    <button>
+                        <span><b>Get started now!</b></span>
+                        <img src="https://i.postimg.cc/ZRqgqj0B/go-6.png">
+                    </button>
+                </a>
+            </div>
+            <div class="leftthirdfourth">
+                <div class="leftthirdfourthcolumn">
+                    <h4>Customer <br>Insights</h4>
+                    <h4 style="margin:-13px; color:#1241BD">50%</h4>
+                </div>
+                <div class="leftthirdfourthcolumn">
+                    <h4>Detecting <br> Fraud</h4>
+                    <h4 style="margin:-13px; color:#1241BD">46%</h4>
+                </div>
+                <div class="leftthirdfourthcolumn">
+                    <h4>Brand <br>Awareness</h4>
+                    <h4 style="margin:-13px; color:#1241BD">30%</h4>
+                </div>
+            </div>
+            <div class="leftfourth">
+                <img src="https://i.postimg.cc/zG4KvF7t/10306116.png">
+                <h1>NLPs: The Future</h1>
+                <h5> A brief exploration of NLPs, delving into the realm of linguistic analysis 
+                    and machine comprehension to unravel the intricacies of language understanding 
+                    and generation.</h5>
+                <a href="nlp.html">
+                    <button>
+                        <span><b>Get started now!</b></span>
+                        <img src="https://i.postimg.cc/ZRqgqj0B/go-6.png">
+                    </button>
+                </a>
+            </div>
+            <div class="leftfourthfifth">
+                <div class="leftfourthfifthcolumn">
+                    <h4>Customer <br>Insights</h4>
+                    <h4 style="margin:-13px; color:#1241BD">50%</h4>
+                </div>
+                <div class="leftfourthfifthcolumn">
+                    <h4>Detecting <br> Fraud</h4>
+                    <h4 style="margin:-13px; color:#1241BD">46%</h4>
+                </div>
+                <div class="leftfourthfifthcolumn">
+                    <h4>Brand <br>Awareness</h4>
+                    <h4 style="margin:-13px; color:#1241BD">30%</h4>
+                </div>
+            </div>
+            <div class="leftfifth">
+                <img src="https://i.postimg.cc/zG4KvF7t/10306116.png">
+                <h1>NLPs: The Future</h1>
+                <h5> A brief exploration of NLPs, delving into the realm of linguistic analysis 
+                    and machine comprehension to unravel the intricacies of language understanding 
+                    and generation.</h5>
+                <a href="nlp.html">
+                    <button>
+                        <span><b>Get started now!</b></span>
+                        <img src="https://i.postimg.cc/ZRqgqj0B/go-6.png">
+                    </button>
+                </a>
+            </div>
         </div>
         <div class="column right">
-            <ul class="projects">
-                <li>
-                    <h2>Anomaly Detection</h2>
-                    <h4>Anomaly detection on images of fonts using Convolutional Neural Networks</h4>
-                </li>
-                <li>
-                    <h2>Multiclass Classification</h2>
-                    <h4>Multiclass Classification on CIFAR-10 dataset using Convolutional Neural Networks</h4>
-                </li>
-            </ul>
-
+            <div class="anomaly">
+                <h2>Anomaly Detection</h2>
+                <a href="https://github.com/dljw98/Anomaly-Detection_CNN">
+                    <img src="https://i.postimg.cc/KjVpYgHn/Screenshot-2023-11-28-055931.png">
+                </a>
+                <h5>Anomaly detection on images of fonts using Convolutional Neural Networks</h5>
+            </div>
+            <div class="line"></div>
+            <br>
+            <div class="multiclass">
+                <h2>Multiclass Classification</h2>
+                <a href="">
+                    <img src="https://i.postimg.cc/zG3D6mn6/Screenshot-2023-11-28-060314.png">
+                </a>
+                <h5>Multiclass Classification on CIFAR-10 dataset using Convolutional Neural Networks</h5>
+            </div>
+            <div class="line"></div>
+            <br>
+            <div class="sentiment">
+                <h2>Sentiment Analysis</h2>
+                <!--a href="">
+                    <img src="">
+                </a-->
+                <h5>Sentiment Analysis using the pre-trained BERT transformer</h5>
+            </div>
+            <div class="line"></div>
+            <br>
+            <div class="forecasting">
+                <h2>Demand Forecasting</h2>
+                <a href="https://github.com/dljw98/Store-Sales-Forecasting">
+                    <img src="https://i.postimg.cc/DZ9tMT93/Screenshot-2023-11-29-053736.png">
+                </a>
+                <h5>Sales forecasting using XGBoost and LSTM</h5>
+            </div>
+            <div class="line"></div>
+            <br>
+            <div class="webscraping">
+                <h2>Web Scraping</h2>
+                <!--a href="">
+                    <img src="">
+                </a-->
+                <h5>Web Scraping with Python using Beautiful Soup</h5>
+            </div>
         </div>
     </div>
 </body>
