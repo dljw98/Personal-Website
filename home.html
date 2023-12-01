@@ -159,7 +159,7 @@
     </div>
     <div class="header">
         <div class="info">
-            <h4><a href="#category">Passion Project</a></h4>
+            <h4><a href="#category">Made primarily with HTML, CSS, Javascript, PyScript with elements of Python and Web Scraping</a></h4>
             <h1>DAVID LIM'S PERSONAL WEBSITE PROJECT</h1>
             <div class="meta">
                 <a  href="https://www.linkedin.com/in/david-lim-jun-wen-a199281a4/" target="_blank" class="author"></a><br>
@@ -167,40 +167,8 @@
             </div>
         </div>
     </div>
-    <!--div id="categories">
-        <h1> Available categories </h1>
-        <ul>
-            <li><a href="bigdata.html">Big Data</a></li>
-            <li><a href="machinelearning.html">Machine Learning</a></li>
-            <li><a href="datastructures.html">Data Structures</a></li>
-            <li><a href="oop.html">Object Oriented Programming</a></li>
-            <li><a href="dashboards.html">Dashboards and Data Visualization</a></li>
-            <li><a href="databases.html">Databases</a></li>
-            <li><a href="python.html">Python Essentials</a></li>
-            <li><a href="java.html">Java Essentials</a></li>
-            <li><a href="sql.html">SQL Essentials</a></li>
-        </ul>
-    </div-->
 
-    <script>
-        /*Toggles between hiding and showing the dropdown when clicked*/
-        function datascience_dropdown() {
-            document.getElementById("datascience-dropdown-content").classList.toggle("show");
-        }
-        //Close the dropdown menu if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches(".dropbutton")) {
-                var dropdowns = document.getElementsByClassName("datascience-dropdown-content");
-                var i;
-                for (i=0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains("show")) {
-                        openDropdown.classList.remove("show"); // Remove show on each dropdown element
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="navbar.js"></script>
 
 </body>
 
