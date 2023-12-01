@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Machine Learning: Information and Projects</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <link rel="stylesheet" type="text/css" href="categories.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i');
+        html,body {
+            margin:0;
+            height:108%;
+            font-family: 'Josefin Sans', sans-serif;
+            background-color: #B8CCFF;
+        }
+        a {
+            text-decoration:none
+        }
+        .header {
+            position:relative;
+            overflow:hidden;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            align-content: flex-start;
+            height:50vw;
+            min-height:400px;
+            max-height:550px;
+            min-width:300px;
+            color:#eee;
+        }
+        .header:after {
+            content:"";
+            width:100%;
+            height:100%;
+            position:absolute;
+            bottom:0;
+            left:0;
+            z-index:-1;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.12) 40%,rgba(27,32,48,1) 100%);
+        }
+        .header:before {
+            content:"";
+            width:100%;
+            height:200%;
+            position:absolute;
+            top:0;
+            left:0;
+                -webkit-backface-visibility: hidden;
+                -webkit-transform: translateZ(0); backface-visibility: hidden;
+            scale:(1.0, 1.0);
+                transform: translateZ(0);
+            background:#1B2030 url(https://images.unsplash.com/photo-1571993142257-eae0b44cf0f1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ) 50% 0 no-repeat;
+            background-size:100%;
+            background-attachment:fixed;
+            animation: grow 360s  linear 10ms infinite;
+            transition:all 0.4s ease-in-out;
+            z-index:-2
+        }
+        .header a {
+            color:#eee
+        }
+        .menu {
+            display:block;
+            width:40px;
+            height:30px;
+            border:2px solid #fff;
+            border-radius:3px;
+            position:absolute;
+            right:20px;
+            top:20px;
+            text-decoration:none
+        }
+        .menu:after {
+            content:"";
+            display:block;
+            width:20px;
+            height:3px;
+            background:#fff;
+            position:absolute;
+            margin:0 auto;
+            top:5px;
+            left:0;
+            right:0;
+            box-shadow:0 8px, 0 16px
+        }
+        .logo {
+            border:2px solid #fff;
+            border-radius:3px;
+            text-decoration:none;
+            display:inline-flex;
+            align-items:center;
+            align-content:center;
+            margin:20px;
+            padding:0px 10px;
+            font-weight:900;
+            font-size:1.1em;
+            line-height:1;
+            box-sizing:border-box;
+            height:40px
+        }
+        .sides, .info {
+            flex: 0 0 auto;
+            width:50%
+        }
+        .info{
+            width:100%;
+            padding:15% 10% 0 10%;
+            text-align:center;
+            text-shadow:0 2px 3px rgba(0,0,0,0.2)
+        }
+        .author {
+            display:inline-block;
+            width:50px;
+            height:50px;
+            border-radius:50%;
+            background:url(https://i.postimg.cc/mkgcXtCQ/crocodile.jpg) center no-repeat;
+            background-size:cover;
+            box-shadow:0 2px 3px rgba(0,0,0,0.3);
+            margin-bottom:3px
+        }
+        .info h4, .meta {
+            font-size:0.7em
+        }
+        .meta {
+            font-style:italic;
+        }
+        @keyframes grow {
+            0% { transform: scale(1) translateY(0px)}
+            50% { transform: scale(1.2) translateY(-400px)}
+        }
+        .content {
+            padding:5% 10%;
+            text-align:justify
+        }
+        body {
+            margin:0px;
+        }
+        #wordsearch {
+            margin-left: 2%;
+            margin-top: 2%;
+            font-size: 16px;
+        }
+        #dimensions {
+            display:inline;
+        }
+        #rows, #cols {
+            width:5ch;
+            height:3ch;
+            margin-left: 1%;
+            text-align: center;
+        }
+        #generate {
+            background-color: #7FB7F3;
+            border-radius: 15px;
+            width:180px;
+            height:40px; 
+        }
+        #reset {
+            background-color: #997FF3;
+            border-radius: 15px;
+            width:80px;
+            height:40px;
+        }
+        .input {
+            width:4.5ch;
+            height:2.75ch;
+            margin-right: 2.5%;
+            text-align: center;
+        }
+        .column {
+            float: left;
+            box-sizing: border-box;
+        }
+        .left {
+            background-color: white;
+            width: 34%;
+            margin: 0% 1% 0% 1%;
+        }
+        .right {
+            background-color: white;
+            width: 58%;
+            margin: 0% 1% 0% 1%;
+        }
+        #title {
+            margin: 0% 2%;
+        }
+        #textcontainer, #generatedwordsearchcontainer {
+            border: 1.5px solid black;
+            top:0;
+            left:0;
+            position: relative;
+        }
+        #texttitle, #generatedwordsearchcontainertitle {
+            background-color: #B9DBFF;
+            position:relative;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 15px;
+        }
+        #text {
+            display:flex;
+            height:210px;
+            font-size: 20px;
+        }
+        #words {
+            height: 80px;
+            font-size: 20px;
+        }
+        #text, #words, #wordstitle {
+            overflow-y:scroll;
+            width: 94%;
+            margin:2% 2%;
+        }
+        #find {
+            background-color: #7FB7F3;
+            border-radius: 15px;
+            padding:2.5% 4%;
+            margin:0% 0% 1% 1%;
+            font-size: 12px;
+        }
+        #generatedwordsearch{
+            width: 95%;
+            height:410px;
+            font-size: 20px;
+            margin:2% 2%;
+            border: 1.5px solid black;
+        }
+        .span{
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="https://i.postimg.cc/GmVTvDnF/pic.png">
+        <a href="home.html">Home</a>
+        <div class="dropdown">
+            <button onclick="datascience_dropdown()" class="dropbutton">Data Science</button>
+            <div id="datascience-dropdown-content" class="datascience-dropdown-content">
+                <a href="datastructures.html">Data Structures</a>
+                <a href="sql.html">SQL Guides</a>
+                <a href="machinelearning.html">Machine Learning</a>
+            </div>
+        </div>
+        <a href="sports.html">Sports</a>
+        <a href="fitness.html">Fitness</a>
+        <a href="wordsearch.html">Word Search Solver</a>
+    </div>
+    <div id="wordsearch">
+        <div id="title">
+            <h1>Word Search Solver</h1>
+            <h4>Enter the letters to your word search below</h4>
+        </div>
+            <div class="column left">
+                <div id="textcontainer">
+                    <h4 id="texttitle">Fill in your word search below!</h4>
+                    <br>
+                    <textarea id="text" name="text" onkeyup="generate(event)"></textarea>
+                    <br>
+                    <h5 id="wordstitle">Fill in the words you want to find below!</h5>
+                    <textarea id="words" name="words"></textarea>
+                    <br><br>
+                    <button id="find" onclick=""><b>Find Words</b></button>
+                </div>
+            </div>
+        </div>
+        <div class="column right">
+            <div id="generatedwordsearchcontainer">
+                <h4 id="generatedwordsearchcontainertitle">Board Preview</h4>
+                <br>
+                <!--textarea id="generatedwordsearch" name="text"></textarea-->
+                <div id="generatedwordsearch">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--div id="wordsearch">
+        <div id="dimensions">
+            <b>Number of rows: </b><input type="text" id="rows" name="rows" value="">
+            <br><br>
+            <b>Number of columns: </b><input type="text" id="cols" name="cols" value="">
+            <br><br>
+            <button id="generate" onclick="addinputFields()"><b>Generate Word Search</b></button>
+        </div>
+        <button id="reset" onclick="reset()"><b>Reset</b></button>
+        <br><br>
+        <div id="container"></div>
+    </div-->
+
+    <script src="navbar.js"></script>
+    <script src="wordsearch.js"></script>
+    <script src="wordsearchnew.js"></script>
+</body>
+
+</html>
